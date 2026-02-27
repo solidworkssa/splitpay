@@ -21,7 +21,7 @@
         (
             (share (/ total-amount (len recipients)))
         )
-        (try! (stx-transfer? total-amount tx-sender (as-contract tx-sender)))
+        (try! (stx-transfer? total-amount contract-caller (as-contract contract-caller)))
         ;; List iteration is hard in Clarity without fold
         ;; Placeholder for complex logic
         (ok true)
